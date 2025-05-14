@@ -10,31 +10,59 @@ namespace Sem08
     {
         static void Main(string[] args)
         {
-           Metodo2();
+            /*int r2 = Metodo2();
+            Console.WriteLine("El factorial es: " + r2);
+            r2 = r2 / 2;
+            Console.WriteLine("La mitas es: " + r2);*/
+            int x;
+            Console.WriteLine("EL numero es: ");
+            x = int.Parse(Console.ReadLine());
+            /*Metodo3(x);*/
+            int r = Metodo4(x);
+            Console.WriteLine("Factorial es: " + r);
+
         }
 
         static void Metodo1()
-        { 
-            int x, y = 1;
+        {
+            int f, y = 1;
             Console.WriteLine("Ingrese un número: ");
-            x = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= x; i++)
+            f = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= f; i++)
             {
                 y = y * i;
             }
-            Console.WriteLine("El factorial de " + x + " es: " + y);
+            Console.WriteLine("El factorial de " + f + " es: " + y);
         }
         static int Metodo2()
         {
-            int x, y = 1;
+            int f, y = 1;
             Console.WriteLine("Ingrese un número: ");
-            x = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= x; i++)
+            f = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= f; i++)
+            {
+                y = y * i;
+            }
+            return y;
+        }
+        static void Metodo3(int n)
+        {
+            int y = 1;
+            for (int i = 1; i <= n; i++)
             {
                 y = y * i;
             }
             Console.WriteLine("El factorial es: " + y);
-            return y;
+        }
+        static int Metodo4(int n)
+        {
+            int resultado = 1;
+            for (int i = 1; i <= n; i++)
+
+            {
+                resultado = resultado * i;
+            }
+            return resultado;
         }
     }
 }
